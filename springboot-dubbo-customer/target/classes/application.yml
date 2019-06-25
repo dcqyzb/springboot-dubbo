@@ -1,0 +1,18 @@
+server:
+  port: 7003
+  servlet:
+    context-path: /
+
+dubbo:
+  application:
+    name: springboot-dubbo-customer
+  metadata-report:
+    address:   zookeeper://127.0.0.1:2181
+  registry:
+    address:   zookeeper://127.0.0.1:2181
+  protocol:
+    port: 20888
+    name: dubbo
+  version: 1.0.0
+  scan:
+    base-packages: com.example.customer.dubboService
