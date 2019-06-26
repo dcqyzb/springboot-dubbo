@@ -9,13 +9,24 @@ spring:
 dubbo:
   registry:
     address: zookeeper://127.0.0.1:2181
-  metadata-report:
-    address: zookeeper://127.0.0.1:2181
+    id: my-registry
   application:
     name: springboot-dubbo-provider
+    id: springboot-dubbo-provider
+    qos-port: 22222
+    qos-enable: true
   protocol:
     port: 20888
     name: dubbo
+    id: dubbo
+    status: server
+  provider:
+    filter: traceProviderFilter
   version: 1.0.0
   scan:
     base-packages: om.example.provider.serviceImpl
+  trace:
+    enabled: true
+    connectTimeout: 1000
+    readTimeout: 1000
+    zipkinUrl: http://127.0.0.1:9411

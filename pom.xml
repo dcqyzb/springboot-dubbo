@@ -11,6 +11,7 @@
     <groupId>com.example</groupId>
     <artifactId>springboot-dubbo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>springboot-dubbo</name>
     <description>Demo project for Spring Boot</description>
 
@@ -22,6 +23,7 @@
         <module>springboot-dubbo-api</module>
         <module>springboot-dubbo-provider</module>
         <module>springboot-dubbo-customer</module>
+        <module>springboot-dubbo-zipkin</module>
     </modules>
 
     <build>

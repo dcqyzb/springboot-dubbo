@@ -3,16 +3,36 @@ server:
   servlet:
     context-path: /
 
+spring:
+  application:
+    name: springboot-dubbo-customer
+  zipkin:
+    bas-url
+
+
 dubbo:
   application:
     name: springboot-dubbo-customer
-  metadata-report:
-    address:   zookeeper://127.0.0.1:2181
+    qos-enable: true
+    qos-port: 22223
+    qos-accept-foreign-ip: true
+    id: springboot-dubbo-customer
   registry:
     address:   zookeeper://127.0.0.1:2181
+    id: customer-registry
   protocol:
     port: 20888
     name: dubbo
+    id: dubbo
+  consumer:
+    timeout: 60000
+    filter: traceConsumerFilter
+  trace:
+    enabled: true
+    connectTimeout: 1000
+    readTimeout: 1000
+    zipkinUrl: http://127.0.0.1:9411
   version: 1.0.0
   scan:
     base-packages: com.example.customer.dubboService
+
