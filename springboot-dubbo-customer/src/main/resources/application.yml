@@ -6,8 +6,6 @@ server:
 spring:
   application:
     name: springboot-dubbo-customer
-  zipkin:
-    bas-url
 
 
 dubbo:
@@ -18,7 +16,7 @@ dubbo:
     qos-accept-foreign-ip: true
     id: springboot-dubbo-customer
   registry:
-    address:   zookeeper://127.0.0.1:2181
+    address: zookeeper://127.0.0.1:2181
     id: customer-registry
   protocol:
     port: 20888

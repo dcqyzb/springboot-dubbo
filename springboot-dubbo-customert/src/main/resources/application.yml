@@ -1,23 +1,20 @@
 server:
-  port: 7003
+  port: 7004
   servlet:
     context-path: /
-
 spring:
   application:
-    name: springboot-dubbo-customer
-
-
+    name: springboot-dubbo-customert
 dubbo:
   application:
-    name: springboot-dubbo-customer
+    id: springboot-dubbo-customert
+    name: springboot-dubbo-customert
     qos-enable: true
-    qos-port: 22223
+    qos-port: 22224
     qos-accept-foreign-ip: true
-    id: springboot-dubbo-customer
   registry:
-    address: zookeeper://127.0.0.1:2181
     id: customer-registry
+    address: zookeeper://127.0.0.1:2181
   protocol:
     port: 20888
     name: dubbo
@@ -32,5 +29,4 @@ dubbo:
     zipkinUrl: http://127.0.0.1:9411
   version: 1.0.0
   scan:
-    base-packages: com.example.customer.dubboService
-
+    base-packages: com.example.customert.dubboService

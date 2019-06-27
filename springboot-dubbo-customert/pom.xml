@@ -7,9 +7,9 @@
         <artifactId>springboot-dubbo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>springboot-dubbo-customer</artifactId>
+    <artifactId>springboot-dubbo-customert</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-dubbo-customer</name>
+    <name>springboot-dubbo-customert</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
@@ -20,15 +20,9 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <!--dubbo start-->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
@@ -50,14 +44,6 @@
             <type>pom</type>
         </dependency>
         <!--zookeeper end-->
-
-
-
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>springboot-dubbo-apit</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
 
         <dependency>
             <groupId>com.example</groupId>
